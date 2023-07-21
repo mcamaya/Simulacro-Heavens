@@ -1,0 +1,125 @@
+{
+  Nombre:
+  Documento:
+  Ministerio:
+  NivelFormacion:
+  Edad:
+  NivelRuta:
+}
+
+{
+  "Nombre": "akio akio akio akio",
+  "Documento": 100512613698,
+  "Ministerio": "Hombres",
+  "NivelFormacion": "Anciano",
+  "Edad": 20,
+  "NivelRuta": "nuevo"
+}
+
+"nuevo","consolidado","enviado"
+
+db.nivelRutas.insertMany([
+  { "NivelRuta" :  "nuevo" },
+  { "NivelRuta" :  "consolidado" },
+  { "NivelRuta" :  "enviado" }
+])
+
+"Liderazgo","Anciano"
+
+db.nivelFormacions.insertMany([
+  { "NivelFormacion" : "Liderazgo"},
+  { "NivelFormacion" : "Anciano"}
+])
+
+"Adoracion", "Mujeres", "jovenes", "Hombres"
+
+db.ministerios.insertMany([
+  { "Ministerio" : "Adoracion"},
+  { "Ministerio" : "Mujeres"},
+  { "Ministerio" : "jovenes"},
+  { "Ministerio" : "Hombres"}
+])
+
+db.creyentes.insertMany([
+  {
+    "Nombre": "Juan Pérez",
+    "Documento": 234567890,
+    "Ministerio": "Adoracion",
+    "NivelFormacion": "Liderazgo",
+    "Edad": 30,
+    "NivelRuta": "consolidado"
+  },
+  {
+    "Nombre": "María Gómez",
+    "Documento": 789012345,
+    "Ministerio": "Mujeres",
+    "NivelFormacion": "Anciano",
+    "Edad": 45,
+    "NivelRuta": "enviado"
+  },
+  {
+    "Nombre": "Pedro Ramírez",
+    "Documento": 456789012,
+    "Ministerio": "jovenes",
+    "NivelFormacion": "Liderazgo",
+    "Edad": 25,
+    "NivelRuta": "nuevo"
+  },
+  {
+    "Nombre": "Laura Torres",
+    "Documento": 123456789,
+    "Ministerio": "Hombres",
+    "NivelFormacion": "Anciano",
+    "Edad": 35,
+    "NivelRuta": "consolidado"
+  },
+  {
+    "Nombre": "Carlos Sánchez",
+    "Documento": 678901234,
+    "Ministerio": "Adoracion",
+    "NivelFormacion": "Liderazgo",
+    "Edad": 28,
+    "NivelRuta": "enviado"
+  },
+  {
+    "Nombre": "Ana López",
+    "Documento": 345678901,
+    "Ministerio": "Mujeres",
+    "NivelFormacion": "Anciano",
+    "Edad": 40,
+    "NivelRuta": "nuevo"
+  },
+  {
+    "Nombre": "Eduardo Gómez",
+    "Documento": 901234567,
+    "Ministerio": "jovenes",
+    "NivelFormacion": "Liderazgo",
+    "Edad": 22,
+    "NivelRuta": "consolidado"
+  },
+  {
+    "Nombre": "Isabel Ramírez",
+    "Documento": 567890123,
+    "Ministerio": "Hombres",
+    "NivelFormacion": "Anciano",
+    "Edad": 32,
+    "NivelRuta": "enviado"
+  },
+  {
+    "Nombre": "Roberto Torres",
+    "Documento": 234567890,
+    "Ministerio": "Adoracion",
+    "NivelFormacion": "Liderazgo",
+    "Edad": 38,
+    "NivelRuta": "nuevo"
+  },
+  {
+    "Nombre": "Sofía Sánchez",
+    "Documento": 789012345,
+    "Ministerio": "Mujeres",
+    "NivelFormacion": "Anciano",
+    "Edad": 29,
+    "NivelRuta": "consolidado"
+  }
+])
+
