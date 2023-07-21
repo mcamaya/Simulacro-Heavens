@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const dbCnxMongo = async () => {
   try{
     await mongoose.connect(process.env.MONGO_URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
+      useNewUrlParser: true,
+      useUnifiedTopology: true
     });
     console.log("MongoDB online");
   }catch(error){
@@ -13,4 +13,4 @@ const dbCnxMongo = async () => {
   }
 }
 
-export {dbCnxMongo};
+export default dbCnxMongo;

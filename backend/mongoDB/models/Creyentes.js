@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const creyenteSchema = mongoose.Schema(
+const creyentesSchema = mongoose.Schema(
   {
     Nombre:{
       type: String,
@@ -39,6 +39,6 @@ const creyenteSchema = mongoose.Schema(
   }
 );
 
-const Creyente = mongoose.model('Creyentes', creyenteSchema);
+const Creyentes = mongoose.model('creyentes', creyentesSchema, 'creyentes');
 
-export default Creyente;
+export default Creyentes;

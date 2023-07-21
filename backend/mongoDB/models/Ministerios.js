@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const ministerioSchema = mongoose.Schema(
+const ministeriosSchema = mongoose.Schema(
   {
     Ministerio:{
       type: String,
@@ -13,6 +13,6 @@ const ministerioSchema = mongoose.Schema(
   }
 );
 
-const Ministerio = mongoose.model( 'ministerios' , ministerioSchema, );
+const Ministerios = mongoose.model( 'ministerios' , ministeriosSchema , 'ministerios' );
 
-export default Ministerio;
+export default Ministerios;

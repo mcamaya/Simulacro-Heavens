@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const nivelSchema = mongoose.Schema(
+const nivelsSchema = mongoose.Schema(
   {
     NivelFormacion:{
       type: String,
@@ -13,6 +13,6 @@ const nivelSchema = mongoose.Schema(
   }
 );
 
-const Nivel = mongoose.model( 'nivelFormacions' , nivelSchema, );
+const NivelFormaciones = mongoose.model( 'nivelformacions' , nivelsSchema , 'nivelformacions');
 
-export default Nivel;
+export default NivelFormaciones;

@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
-import { dbCnxMongo } from "../database/config.js";
+import dbCnxMongo from "../database/config.js";
+import creyentesRouter from "./../routes/creyente.routes.js";
 
 class Server {
     constructor(){
@@ -8,6 +9,7 @@ class Server {
         this.port = process.env.PORT;
         this.middlewares();
         this.connectMongoDB();
+        this.routes();
     }
 
     async connectMongoDB(){
@@ -15,14 +17,14 @@ class Server {
     }
 
     middlewares(){
-        this.app.use(express.json());
         this.app.use(cors());
+        this.app.use(express.json());
     }
 
-    routes(departamentos, municipios, creyentes){
-        this.app.use(...departamentos);
-        this.app.use(...municipios);
-        this.app.use(...creyentes);
+    routes(){
+        // this.app.use(...departamentos);
+        // this.app.use(...municipios);
+        this.app.use(creyentesRouter);
     }
 
     listen(){
@@ -32,4 +34,4 @@ class Server {
     }
 }
 
-export {Server};
+export default Server;

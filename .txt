@@ -18,7 +18,7 @@
 
 "nuevo","consolidado","enviado"
 
-db.nivelRutas.insertMany([
+db.nivelrutas.insertMany([
   { "NivelRuta" :  "nuevo" },
   { "NivelRuta" :  "consolidado" },
   { "NivelRuta" :  "enviado" }
@@ -26,7 +26,7 @@ db.nivelRutas.insertMany([
 
 "Liderazgo","Anciano"
 
-db.nivelFormacions.insertMany([
+db.nivelformacions.insertMany([
   { "NivelFormacion" : "Liderazgo"},
   { "NivelFormacion" : "Anciano"}
 ])

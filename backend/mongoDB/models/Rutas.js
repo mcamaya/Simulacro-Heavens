@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const rutaSchema = mongoose.Schema(
+const rutasSchema = mongoose.Schema(
   {
     NivelRuta:{
       type: String,
@@ -13,6 +13,6 @@ const rutaSchema = mongoose.Schema(
   }
 );
 
-const Ruta = mongoose.model( 'nivelRutas' , rutaSchema );
+const Rutas = mongoose.model( 'nivelrutas' , rutasSchema , 'nivelrutas');
 
-export default Ruta;
+export default Rutas;
