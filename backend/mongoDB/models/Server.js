@@ -1,7 +1,6 @@
 import express from "express";
 import cors from "cors";
 import dbCnxMongo from "../database/config.js";
-import creyentesRouter from "./../routes/creyente.routes.js";
 
 class Server {
     constructor(){
@@ -21,10 +20,14 @@ class Server {
         this.app.use(express.json());
     }
 
-    routes(){
-        // this.app.use(...departamentos);
-        // this.app.use(...municipios);
-        this.app.use(creyentesRouter);
+    routes(departamentos, municipios, comunas, barrios, creyentesMysql, creyentesMongo){
+        this.app.use(...departamentos);
+        this.app.use(...municipios);
+        this.app.use(...comunas);
+        this.app.use(...barrios);
+        this.app.use(...creyentesMysql);
+        this.app.use(...creyentesMongo);
+        
     }
 
     listen(){
