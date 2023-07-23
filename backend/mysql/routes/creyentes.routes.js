@@ -1,4 +1,4 @@
-import { methodsHTTP as creyentesController } from "../controllers/creyentes.controllers.js.js";
+import { methodsHTTP as creyentesController } from "../controllers/creyentes.controllers.js";
 import { Router } from "express";
 
 const router = Router();
