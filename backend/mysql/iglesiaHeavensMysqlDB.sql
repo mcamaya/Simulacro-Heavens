@@ -41,3 +41,13 @@ CREATE TABLE creyentes (
 
     FOREIGN KEY (fk_id_barrio) REFERENCES barrios(id_barrio)
 );
+
+INSERT INTO `departamentos` (`id_departamento`, `nombre_departamento`) VALUES ('1', 'Santander'), ('2', 'Cundinamarca');
+
+INSERT INTO `municipios` (`id_municipio`, `nombre_municipio`, `fk_id_departamento`) VALUES ('1', 'Bucaramanga', '1'), ('2', 'Floridablanca', '1'), ('3', 'Bogotá', '2');
+
+INSERT INTO `comunas` (`id_comuna`, `nombre_comuna`, `fk_id_municipio`) VALUES ('1', 'Comuna 1 Norte', '1'), ('2', 'Comuna 2 Nororiental', '1'), ('3', 'Comuna 10 Provenza', '1'), ('4', 'Comuna  11 Sur', '1');
+
+INSERT INTO `barrios` (`id_barrio`, `nombre_barrio`, `fk_id_comuna`) VALUES ('1', 'El Rocío', '4'), ('2', 'Provenza', '3'), ('3', 'Kennedy', '1'), ('4', 'Regadero Norte', '2');
+
+INSERT INTO `creyentes` (`id_creyente`, `nombre_creyente`, `email_creyente`, `celular_creyente`, `direccion_creyente`, `fk_id_barrio`) VALUES ('1', 'Jorge Ramirez', 'jorgito@example.com', '3120451987', 'Calle 106 #54-12', '2'), ('2', 'Sara Lizarazo', 'saralizarazo@example.com', '3195421009', 'Cra 43 #27-43', '4');
