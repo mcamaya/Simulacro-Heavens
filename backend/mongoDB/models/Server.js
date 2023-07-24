@@ -8,7 +8,6 @@ class Server {
         this.port = process.env.PORT;
         this.middlewares();
         this.connectMongoDB();
-        this.routes();
     }
 
     async connectMongoDB(){
