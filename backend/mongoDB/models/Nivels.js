@@ -13,6 +13,6 @@ const nivelsSchema = mongoose.Schema(
   }
 );
 
-const NivelFormaciones = mongoose.model( 'nivelformacions' , nivelsSchema , 'nivelformacions');
+const NivelFormaciones = mongoose.model( 'nivelformacions' , nivelsSchema );
 
 export default NivelFormaciones;

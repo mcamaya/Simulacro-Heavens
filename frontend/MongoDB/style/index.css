@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 *{
     margin: 0;
-    padding: 0 !important;
+    padding: 0 ;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif ;
 }
@@ -10,7 +10,7 @@
     /* ===== Colors ===== */
     --body-color: #E4E9F7;
     --sidebar-color: #FFF;
-    --primary-color: #34974d;
+    --primary-color: #712c94;
     --primary-color-light: #F6F5FF;
     --toggle-color: #DDD;
     --text-color: #707070;
@@ -32,7 +32,7 @@ body{
 body.dark{
     --body-color: #18191a !important;
     --sidebar-color: #242526 !important;
-    --primary-color: #3a3b3c !important;
+    --primary-color: #712c94 !important;
     --primary-color-light: #3a3b3c !important;
     --toggle-color: #fff !important;
     --text-color: #ccc !important;
@@ -50,7 +50,7 @@ body.dark{
     z-index: 100 !important;  
 }
 .sidebar.close{
-    width: 88px !important;
+    width: 120px !important;
 }
 /* ===== Reusable code - Here ===== */
 .sidebar li{
@@ -282,13 +282,14 @@ body.dark .home .text{
 
 .addCategory {
     position: relative;
-    width: 150px;
+    width: 220px;
     height: 40px;
     cursor: pointer;
     display: flex;
     align-items: center;
-    border: 1px solid #34974d;
-    background-color: #3aa856;
+    border: 2px solid #000000;
+    border-radius: 12px;
+    background-color: #294ba0;
   }
   
   .addCategory, .addCategory__icon, .addCategory__text {
@@ -303,22 +304,24 @@ body.dark .home .text{
   
   .addCategory .addCategory__icon {
     position: absolute;
-    transform: translateX(109px);
+    transform: translateX(179px);
     height: 100%;
     width: 39px;
-    background-color: #34974d;
+    background-color: #31136e;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 11px;
   }
   
   .addCategory .svg {
-    width: 30px;
+    width: 70px;
     stroke: #fff;
+
   }
   
   .addCategory:hover {
-    background: #34974d;
+    background: #31136e;
   }
   
   .addCategory:hover .addCategory__text {
@@ -326,16 +329,17 @@ body.dark .home .text{
   }
   
   .addCategory:hover .addCategory__icon {
-    width: 148px;
+    width: 170px;
     transform: translateX(0);
+    color: #ccc;
   }
   
   .addCategory:active .addCategory__icon {
-    background-color: #2e8644;
+    background-color: #294ba0;
   }
   
   .addCategory:active {
-    border: 1px solid #2e8644;
+    border: 1px solid #294ba0;
   }
 
 /*Contenedor Tarjetas*/
@@ -355,145 +359,9 @@ main{
     justify-content: end;
 }
 
-/*Formularios*/
-.formularios{
-    padding: 1rem !important;
-}
-
-.modaltitulo, .modal-footer, .btnForm{
-    padding: 0.5rem !important;
-}
-
-/*Boton Editar*/
-.edit-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    position: relative;
-    text-decoration: none !important;
-  }
-  
-  .edit-svgIcon {
-    width: 17px;
-    transition-duration: 0.3s;
-  }
-  
-  .edit-svgIcon path {
-    fill: white;
-  }
-  
-  .edit-button:hover {
-    width: 120px;
-    border-radius: 50px;
-    transition-duration: 0.3s;
-    background-color: #3aa856;
-    align-items: center;
-  }
-  
-  .edit-button:hover .edit-svgIcon {
-    width: 20px;
-    transition-duration: 0.3s;
-    transform: translateY(60%);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  
-  .edit-button::before {
-    display: none;
-    content: "Edit";
-    color: white;
-    transition-duration: 0.3s;
-    font-size: 2px;
-  }
-  
-  .edit-button:hover::before {
-    display: block;
-    padding-right: 10px;
-    font-size: 13px;
-    opacity: 1;
-    transform: translateY(0px);
-    transition-duration: 0.3s;
-  }
-
-  /*Boton Eliminar*/
-  .delete-button {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: rgb(20, 20, 20);
-    border: none;
-    font-weight: 600;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.164);
-    cursor: pointer;
-    transition-duration: 0.3s;
-    overflow: hidden;
-    position: relative;
-  }
-  
-  .delete-svgIcon {
-    width: 15px;
-    transition-duration: 0.3s;
-  }
-  
-  .delete-svgIcon path {
-    fill: white;
-  }
-  
-  .delete-button:hover {
-    width: 90px;
-    border-radius: 50px;
-    transition-duration: 0.3s;
-    background-color: rgb(255, 69, 69);
-    align-items: center;
-  }
-  
-  .delete-button:hover .delete-svgIcon {
-    width: 20px;
-    transition-duration: 0.3s;
-    transform: translateY(60%);
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-  
-  .delete-button::before {
-    display: none;
-    content: "Delete";
-    color: white;
-    transition-duration: 0.3s;
-    font-size: 2px;
-  }
-  
-  .delete-button:hover::before {
-    display: block;
-    padding-right: 10px;
-    font-size: 13px;
-    opacity: 1;
-    transform: translateY(0px);
-    transition-duration: 0.3s;
-  }
-
 
   .menu-links .active {
-    background-color: #3aa856;
+    background-color: #3926a1;
   }
 
   .botones_orden{
@@ -502,7 +370,131 @@ main{
     justify-content: space-evenly;
   }
 
-  
+/* modals */
 
+.login-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 500px;
+  padding: 40px;
+  transform: translate(-50%, -50%);
+  background: rgba(24, 20, 20, 0.987);
+  box-sizing: border-box;
+  box-shadow: 0 15px 25px rgba(0,0,0,.6);
+  border-radius: 10px;
+}
 
+.login-box .user-box {
+  position: relative;
+}
 
+.login-box .user-box input {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  color: #fff;
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box > select {
+  width: 100%;
+  padding: 10px 0;
+  font-size: 16px;
+  -webkit-text-fill-color: white;
+  margin-bottom: 40px;
+  border: none;
+  border-bottom: 1px solid #fff;
+  outline: none;
+  background: transparent;
+}
+
+.login-box .user-box label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 0;
+  font-size: 16px;
+  color: #fff;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.login-box .user-box input:focus ~ label,
+.login-box .user-box input:valid ~ label {
+  top: -25px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 18px;
+}
+
+.login-box .user-box select:focus ~ label,
+.login-box .user-box select:valid ~ label {
+  top: -25px;
+  left: 0;
+  color: #bdb8b8;
+  font-size: 18px;
+}
+
+.login-box form .btn-send {
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  color: #ffffff;
+  font-size: 16px;
+  text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  transition: .5s;
+  margin-top: 40px;
+  letter-spacing: 4px
+}
+
+.login-box .btn-send:hover {
+  background: #299ab6;
+  color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #299ab6,
+              0 0 25px #299ab6,
+              0 0 50px #299ab6,
+              0 0 100px #299ab6;
+}
+
+.login-box .btn-send span {
+  position: absolute;
+  display: block;
+}
+
+@keyframes btn-anim1 {
+  0% {
+    left: -100%;
+  }
+
+  50%,100% {
+    left: 100%;
+  }
+}
+
+.login-box .btn-send span:nth-child(1) {
+  bottom: 2px;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #299ab6);
+  animation: btn-anim1 2s linear infinite;
+}
+
+.btn-send-container {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-send{
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}

@@ -20,7 +20,7 @@ export const newCreyentes = async (registroCreyente) => {
         'Content-Type': 'application/json'
       }
     });
-    window.location = "./creyentes.html";
+    // window.location = "./creyentes.html";
   } catch (error) {
     console.log(error);
   }

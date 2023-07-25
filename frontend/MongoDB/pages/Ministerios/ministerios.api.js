@@ -2,7 +2,7 @@ const urlMinisterios = "http://localhost:8000/api/ministerios";
 
 export const getMinisterios= async ()=>{
   try {
-      const ministerio = await fetch (`${urlministerios}/`);
+      const ministerio = await fetch (`${urlMinisterios}/`);
       const datoMinisterios = await ministerio.json();
       console.log(datoMinisterios);
       return datoMinisterios;
