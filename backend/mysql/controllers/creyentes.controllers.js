@@ -3,7 +3,7 @@ import getConnection from "../database/config.js";
 const getCreyentes = async (req, res) => {
     try {
         const dbCnx = await getConnection();
-        const response = await dbCnx.query("SELECT * FROM creyentes");
+        const response = await dbCnx.query("SELECT * FROM creyentes INNER JOIN barrios ON barrios.id_barrio = creyentes.fk_id_barrio");
         res.json(response)
     } catch (err) {
         res.status(500).send(err.message);
